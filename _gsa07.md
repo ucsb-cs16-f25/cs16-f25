@@ -74,7 +74,7 @@ Please note that all of these functions **must** be written recursively. You wil
 There are 8 functions you will need to write for this assignment, one of which is a bonus:
 
 In strFuncs.cpp:
-- **isPalindrome()**
+- **[10 points] isPalindrome()**
   - Recursively check if a string is a palindrome
   - A palindrome is a word or phrase that reads the same backwards & forwards 
   - Palindromes **are not** case-sensitive - disregard spaces as well
@@ -83,21 +83,21 @@ In strFuncs.cpp:
     - *HelloN* reads *olleH* and is not a palindrome
     
 In linkedListFuncs.cpp:
-- **recursiveSum()**
+- **[10 points] recursiveSum()**
    - Recursively calculate the sum of a linked list
    - Given a head node, return the sum of the linked list
    - Example
       - list:  2 &rarr; 3 &rarr; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         - recursiveSum(list) = 9
 
-- **recursiveLargestValue()**
+- **[10 points] recursiveLargestValue()**
    - Recursively find the largest value in a linked list
    - Given a head node, return the largest value in the linked list
    - Example
       - list:  2 &rarr; 3 &rarr; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         - recursiveLargestValue(list) = 4
 
-- **recursiveFindKthNode()**
+- **[10 points] recursiveFindKthNode()**
   - Recursively find the kth Node of a linked list
   - Given a head node and integer k, return the address of the kth node
     - You do not know whether the linked-list contains k or more nodes; if k is greater than the length of the linked-list, return NULL
@@ -107,7 +107,7 @@ In linkedListFuncs.cpp:
         - recursiveFindKthNode(list, 3) = 4
         - recursiveFindKthNode(list, 4) = NULL
 
-- **recursiveDeleteKthNode()**
+- **[10 points] recursiveDeleteKthNode()**
   - Recursively delete the kth node from a linked list 
   - Given the head of a linked list, delete the kth node from the linked list
     - k will always be less than or equal to the length of the linked list
@@ -116,9 +116,9 @@ In linkedListFuncs.cpp:
       - list:  2 &rarr; 3 &rarr; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         - recursiveDeleteKthNode(list, 2) = 2 &rarr; 4
         - recursiveDeleteKthNode(list, 1) = 3 &rarr; 4
-        - recursiveDeleteKthNode(list, 4) = 2 &rarr; 3
+        - recursiveDeleteKthNode(list, 3) = 2 &rarr; 3
 
-- **recursiveRemoveKFromFront()**
+- **[10 points] recursiveRemoveKFromFront()**
   - Recursively delete k nodes from a linked list
   - Given the head of a linked list, delete the first k nodes from the linked list
     - k will always be less than or equal to the length of the linked list
@@ -128,7 +128,7 @@ In linkedListFuncs.cpp:
         - recursiveRemoveKFromFront(list, 2) = 4
         - recursiveRemoveKFromFront(list, 1) = 3 &rarr; 4
 
-- **recursiveElementwiseSum()**
+- **[10 points] recursiveElementwiseSum()**
   - Recursively find the elementwise sum of two linked lists
   - Given two head nodes, return the head of a **new** linked-list where each element is the sum of the corresponding element of the other two
     - if one linked-list is shorter, fill the rest of the result with elements from the other (i.e., treat the non-existent nodes as a value of zero)
@@ -180,7 +180,7 @@ Submit the `strFuncs.cpp` and `linkedListFuncs.cpp` files on gradescope.
 
 Most of the points will be awarded based on gradescope automatic grading. Other points will be assigned after visual code inspection by TAs - if a function is not implemented recursively, you will receive **NOT** receive any credit for that function at all.
 
-<!-- ## Gradescope Autograder
+## Gradescope Autograder
 
 <table border="1">
 <tr><th>Test Name</th><th>Value</th></tr>
@@ -194,7 +194,7 @@ Most of the points will be awarded based on gradescope automatic grading. Other 
 <tr><td><p style="color:green;margin:0;padding:0;">recursiveSplice()</p></td><td>[10 pts]</td></tr>
 <tr><td><p style="color:green;margin:0;padding:0;">Git Etiquette</p></td><td>[10 pts]</td></tr>
 <tr><td><p style="color:green;margin:0;padding:0;">Make</p></td><td>[10 pts]</td></tr>
-</table> -->
+</table>
 
 
 ## Academic Honesty
