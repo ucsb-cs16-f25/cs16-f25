@@ -3,10 +3,10 @@ theme: just-the-docs
 
 incremental: true
 
-title: "CS16 W24"
-baseurl: "/w24"
+title: "CS16 S24"
+baseurl: "/s24"
 
-github_org: ucsb-cs16-w24
+github_org: ucsb-cs16-s24
 
 mermaid:
   # Version of mermaid library
