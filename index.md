@@ -19,9 +19,6 @@ For more information about this course, please go to our canvas page:
 {% endfor %}
 
 # Formatting guide
-Please make sure the code you submit follows the formatting guide below, and we **do** 
-review your format as a part of our grading. You may lose points if you are not following 
-this guide completely.
 
 <a href="assets/pdfs/formatting-guide.pdf" target="_blank">Open in new tab</a>
 
