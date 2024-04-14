@@ -177,7 +177,7 @@ remote: Counting objects: 100% (10/10), done.
 remote: Compressing objects: 100% (7/7), done.
 remote: Total 10 (delta 2), reused 7 (delta 2), pack-reused 0
 Unpacking objects: 100% (10/10), 2.45 KiB | 47.00 KiB/s, done.
-From github.com:ucsb-cs16-w24/STARTER-gsa02
+From github.com:ucsb-cs16-s24/STARTER-gsa02
  * branch            main       -> FETCH_HEAD
  * [new branch]      main       -> starter/main
 $ls
@@ -202,7 +202,7 @@ Compressing objects: 100% (9/9), done.
 Writing objects: 100% (10/10), 3.90 KiB | 1.95 MiB/s, done.
 Total 10 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), done.
-To github.com:ucsb-cs16-w24/gsa02-YOUR-GITHUB-ID.git
+To github.com:ucsb-cs16-s24/gsa02-YOUR-GITHUB-ID.git
  * [new branch]      main -> main
 [dimirza@csilvm-11 gsa02_test]$ git status
 On branch main
