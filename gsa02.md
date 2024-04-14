@@ -4,8 +4,8 @@ title: GSA 02
 num: gsa02
 nav_order: 3
 desc: 'ASCII Art: Logical operators'
-starter_url: https://github.com/ucsb-cs16-w24/STARTER-gsa02
-starter_remote: git@github.com:ucsb-cs16-w24/STARTER-gsa02.git
+starter_url: https://github.com/ucsb-cs16-s24/STARTER-gsa02
+starter_remote: git@github.com:ucsb-cs16-s24/STARTER-gsa02.git
 ---
 
 # {{page.title}} - {{page.desc}}
