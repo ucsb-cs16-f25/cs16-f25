@@ -3,7 +3,7 @@ layout: page
 title: GSA 04
 num: gsa04
 nav_order: 5
-desc: "Caesar Cipher"
+desc: "Ciphers"
 assigned: 2023-02-23 13:00
 due: 2023-03-08 23:59
 ---
