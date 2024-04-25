@@ -57,9 +57,8 @@ If you need help with these steps:
 Once you've populated your repo, typing the `ls` command should show you the following files in your current directory
 
 ```
-$ ls
-Makefile	Rectangle.cpp	Rectangle.h	rugfit1.cpp	rugfit2.cpp
-$ 
+[user@csilvm-xx gsa04]$ ls
+Makefile	caesar.cpp	substitution.cpp
 ```
 
 ## Step 3: Caesar
@@ -75,7 +74,7 @@ is  not composed entirely of the digits  `0` through `9`,  print a usage message
 and exit with exit code 1 to indicate that there was an error:
 
 ```
-[julius@gallia gsa04]$ ./caesar
+[user@csilvm-xx gsa04]$ ./caesar
 USAGE: caesar [-ed] [key]
 ```
 
@@ -88,7 +87,7 @@ rotated right 3 would become a `d`,  and a `y` rotated right by 3 would become a
 be left unchanged.
 
 ```
-[julius@gallia gsa04]$ ./caesar -e 3
+[user@csilvm-xx gsa04]$ ./caesar -e 3
 abcdefghijklmnopqrstuvwxyz
 defghijklmnopqrstuvwxyzabc
 Veni, vidi, vici.
@@ -98,7 +97,7 @@ Yhql, ylgl, ylfl.
 When decrypting, all letters should be rotated left.
 
 ```
-[julius@gallia gsa04]$ ./caesar -d 5
+[user@csilvm-xx gsa04]$ ./caesar -d 5
 Frtw Anshny Trsnf
 Amor Vincit Omnia
 ```
@@ -119,7 +118,7 @@ once.  If  you run  the program  with the  wrong number of arguments,  or if any
 argument is invalid, it should print a usage message and exit with exit code 1:
 
 ```
-[julius@gallia gsa04]$ ./substitution
+[user@csilvm-xx gsa04]$ ./substitution
 USAGE: substitution [-ed] [key]
 ```
 
@@ -129,7 +128,7 @@ When encrypting, the letter `A` should be replaced with the first letter of the
 key, the letter `B` with the second, `C` with the third, and so on.
 
 ```
-[julius@gallia gsa04]$ ./substitution -e egjhvakrzxpsynbtudmqiclfow
+[user@csilvm-xx gsa04]$ ./substitution -e egjhvakrzxpsynbtudmqiclfow
 Outside of a dog, a book is man's best friend.
 Biqmzhv ba e hbk, e gbbp zm yen'm gvmq adzvnh.
 Inside of a dog, it's too dark to read.
@@ -149,7 +148,7 @@ When decrypting,  the first letter  of the key  should be replaced with `A`, the
 second letter with `B`, the third with `C`, and so on.
 
 ```
-[julius@gallia gsa04]$ ./substitution -d rptxnfhewgzdkicmbujsavloqy
+[user@csilvm-xx gsa04]$ ./substitution -d rptxnfhewgzdkicmbujsavloqy
 Leq jecadx ln ervn r jsrixwih rukq?
 Why should we have a standing army?
 Pntrajn sers lrq ln jrvn kcinq ci terwuj.
@@ -183,4 +182,4 @@ You should see a score of 100/100 for this assignment.
 
 
 ## Acknowledgement
-This GSA is developed from a lab assignment created by Kevin Burk
+Assignment originally designed by Kevin Burk
