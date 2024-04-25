@@ -62,7 +62,7 @@ Makefile	Rectangle.cpp	Rectangle.h	rugfit1.cpp	rugfit2.cpp
 $ 
 ```
 
-## Caesar
+## Step 3: Caesar
 
 In `caesar.cpp`, finish the program that implements
 a [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher).
@@ -106,7 +106,7 @@ Amor Vincit Omnia
 The key may be greater than twenty-six.  Note that when the key is a multiple of
 26, the input should be unchanged.
 
-## Substitution
+## Step 4: Substitution
 
 In this `substitution.cpp`, finish the program that uses
 a   [substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)  to
@@ -168,14 +168,14 @@ and Mac (Ubuntu in WSL counts as Linux),  and use `Ctrl`+`Z` followed by `Enter`
 on Windows.
 
 
-## Step 7: Upload your code to github one last time
+## Step 5: Upload your code to github one last time
 
 Hopefully you remembered to sync your local changes to github often as you were completing the assignment.
 
 If you forgot to do so, be sure to follow the steps in section 1d (above) to upload your final code to github
 
 
-## Step 8: Submit your code to gradescope
+## Step 6: Submit your code to gradescope
 
 Go to our class site on [www.gradescope.com](www.gradescope.com). Navigate to the assignment for this assignment and submit your code via github.
 
