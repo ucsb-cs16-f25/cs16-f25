@@ -1,8 +1,8 @@
 ---
 layout: page
-title: GSA 08
-num: gsa08
-nav_order: 10
+title: GSA 04
+num: gsa04
+nav_order: 5
 desc: "Caesar Cipher"
 assigned: 2023-02-23 13:00
 due: 2023-03-08 23:59
@@ -64,7 +64,7 @@ $
 
 ## Caesar
 
-Create a file named `caesar.cpp`.  In this file, write a program that implements
+In `caesar.cpp`, finish the program that implements
 a [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher).
 
 Your program should expect  two command line arguments.  The first argument must
@@ -75,7 +75,7 @@ is  not composed entirely of the digits  `0` through `9`,  print a usage message
 and exit with exit code 1 to indicate that there was an error:
 
 ```
-[julius@gallia lab4]$ ./caesar
+[julius@gallia gsa04]$ ./caesar
 USAGE: caesar [-ed] [key]
 ```
 
@@ -88,7 +88,7 @@ rotated right 3 would become a `d`,  and a `y` rotated right by 3 would become a
 be left unchanged.
 
 ```
-[julius@gallia lab4]$ ./caesar -e 3
+[julius@gallia gsa04]$ ./caesar -e 3
 abcdefghijklmnopqrstuvwxyz
 defghijklmnopqrstuvwxyzabc
 Veni, vidi, vici.
@@ -98,13 +98,69 @@ Yhql, ylgl, ylfl.
 When decrypting, all letters should be rotated left.
 
 ```
-[julius@gallia lab4]$ ./caesar -d 5
+[julius@gallia gsa04]$ ./caesar -d 5
 Frtw Anshny Trsnf
 Amor Vincit Omnia
 ```
 
 The key may be greater than twenty-six.  Note that when the key is a multiple of
 26, the input should be unchanged.
+
+## Substitution
+
+In this `substitution.cpp`, finish the program that uses
+a   [substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)  to
+encrypt or decrypt its input.
+
+Your program should take two command line arguments:  the first argument must be
+either `-e` (for encryption) or `-d` (for decryption).  The second argument must
+be a twenty-six-character string  containing each letter of the alphabet exactly
+once.  If  you run  the program  with the  wrong number of arguments,  or if any
+argument is invalid, it should print a usage message and exit with exit code 1:
+
+```
+[julius@gallia gsa04]$ ./substitution
+USAGE: substitution [-ed] [key]
+```
+
+If the command line arguments are valid,  your program should read its input one
+line at a time, encrypting or decrypting each line and then printing the result.
+When encrypting, the letter `A` should be replaced with the first letter of the
+key, the letter `B` with the second, `C` with the third, and so on.
+
+```
+[julius@gallia gsa04]$ ./substitution -e egjhvakrzxpsynbtudmqiclfow
+Outside of a dog, a book is man's best friend.
+Biqmzhv ba e hbk, e gbbp zm yen'm gvmq adzvnh.
+Inside of a dog, it's too dark to read.
+Znmzhv ba e hbk, zq'm qbb hedp qb dveh.
+```
+
+To make it easier to see what happened in the example above, you can line up the
+key with the unmodified alphabet. Each letter in the alphabet maps to the letter
+in the key at the same index:
+
+```
+abcdefghijklmnopqrstuvwxyz
+egjhvakrzxpsynbtudmqiclfow
+```
+
+When decrypting,  the first letter  of the key  should be replaced with `A`, the
+second letter with `B`, the third with `C`, and so on.
+
+```
+[julius@gallia gsa04]$ ./substitution -d rptxnfhewgzdkicmbujsavloqy
+Leq jecadx ln ervn r jsrixwih rukq?
+Why should we have a standing army?
+Pntrajn sers lrq ln jrvn kcinq ci terwuj.
+Because that way we save money on chairs.
+```
+
+The letters of the key can be either upper or lower case (or mixed),  as long as
+every  letter of the alphabet is present.  When encrypting and decrypting, match
+the case of the input. The key `abcdefghijklmnopqrstuvwxyz` will leave the input
+unchanged.
+
 
 ### Tips
 To manually send an "end of input" signal while testing, use `Ctrl`+`D` on Linux
