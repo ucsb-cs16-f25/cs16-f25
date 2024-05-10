@@ -1,12 +1,12 @@
 ---
 layout: page
-title: GSA 04
+title: GSA 05
 nav_order: 5
 desc: "Array lists and dynamic arrays"
 assigned: 2023-02-23 13:00
 due: 2023-03-08 23:59
 prev_odds_and_primes_lab: gsa03 
-num: gsa04
+num: gsa05
 ---
 
 # {{page.title}} - {{page.desc}}
