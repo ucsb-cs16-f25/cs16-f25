@@ -1,8 +1,8 @@
 ---
 layout: page
-num: gsa05
-title: GSA 05
-nav_order: 6
+num: gsa06
+title: GSA 06
+nav_order: 7
 ready: true
 desc: "Fun with shapes: Pointers and Structs"
 assigned: 2023-11-09 14:00
