@@ -1,8 +1,8 @@
 ---
 layout: page
-title: GSA 06
-num: gsa06
-nav_order: 7
+title: GSA 07
+num: gsa07
+nav_order: 8
 desc: "Linked Lists in C++ with structs"
 assigned: 2023-03-01 13:00
 due: 2023-03-15 23:59
