@@ -1,7 +1,7 @@
 ---
 layout: page
-title: GSA 07
-num: gsa07
+title: GSA 08
+num: gsa08
 nav_order: 8
 desc: "Recursion"
 assigned: 2023-03-01 13:00
