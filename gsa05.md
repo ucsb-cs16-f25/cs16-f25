@@ -1,32 +1,31 @@
 ---
 layout: page
-title: GSA 05
+title: HW05
 nav_order: 6
-desc: "Array lists and dynamic arrays"
+desc: "Array Lists and Dynamic Arrays"
 assigned: 2023-02-23 13:00
 due: 2023-03-08 23:59
-prev_odds_and_primes_lab: gsa03 
-num: gsa05
+num: hw05
+published: true
 ---
 
 # {{page.title}} - {{page.desc}}
 
-
 ## Goals of this assignment
 
-The goal of this assignment is get more practice with iterating through arrays and dynamically allocating memory. Continue to practice code tracing to reason about your code. We request that you DO NOT ask the staff to debug your code. They have been specifically instructed not to debug for you, rather to guide in the process.
+The goal of this assignment is to get more practice with iterating through arrays and dynamically allocating memory. Continue to practice code tracing to reason about your code. We request that you **do not** ask the staff to debug your code. They have been specifically instructed not to debug for you, but rather to guide you in the process.
 
-# Step by Step Instructions
+# Step-by-step instructions
 
-## Step 1: Getting Ready
+## Step 1: Getting ready
 
-1. Go to github and find a repo for {{page.num}} assigned to your GitHub id.
+1. Go to Github and find a repo for HW05 assigned to your GitHub ID.
 
 2. Log on to your CSIL account.
 
 3. Change into your `~/cs16` directory
 
-4. Clone your empty {{page.num}} repo into your `~/cs16` directory.
+4. Clone your empty `{{page.num}}` repo into your `~/cs16` directory.
 
 5. In your empty repo, do `git checkout -b main` to establish that you are on the `main` branch as your default branch.
 
@@ -37,16 +36,16 @@ The starter code is in this repo:
 
 * <https://github.com/{{site.github_org}}/STARTER-{{page.num}}>
 
-The URL for cloning this repo is this: <tt>git@github.com:{{site.github_org}}/STARTER-{{page.num}}.git</tt>
+The URL for cloning this repo is this: `git@github.com:{{site.github_org}}/STARTER-{{page.num}}.git`
 
 Previous assignments contain instruction for the process of:
-* Adding a `starter` remote for this repo
+* Adding a `starter` remote for this repo.
 * Pulling the code from that `starter` remote into your own repo.
 
 Please do those steps now, and then do a `git push origin main` to populate your own repo with the starter code.
 
 If you need help with these steps:
-* First consult previous assignments for more detailed instructions.   
+* First, consult previous assignments for more detailed instructions.
 * Then, if you are still having trouble, ask the staff for help during discussion section or office hours.
 
 Once you've populated your repo, typing the `ls` command should show you the following files in your current directory
@@ -56,39 +55,35 @@ $ ls
 Makefile		arrayFuncs.h		moreArrayFuncs.h
 README.md		mafTest.cpp		tddFuncs.cpp
 arrayFuncs.cpp		moreArrayFuncs.cpp	tddFuncs.h
-$ 
+$
 ```
-
 
 ## Step 3: Reviewing the files and what your tasks are
 
-Here is a list of your tasks for this assignment:
-
 ### Step 3a: Familiarize yourself with the big picture
 
-Type "make tests" and you will see some tests pass, but some fail.
-
+Type `make tests` and you will see some tests pass, but some fail.
 You are finished when all the tests pass.
 
-There is only one file that you need to edit this week: 
+There is only one file that you need to edit this week: `moreArrayFuncs.cpp`, which contains more functions that deal with arrays.
 
-* <code>moreArrayFuncs.cpp</code> contains more functions that deal with arrays. These are in addition to the arrayFuncs.cpp that you worked with before in {{page.prev_odds_and_primes_lab}}.
+These are in addition to the `arrayFuncs.cpp` that you worked with before in HW03.
 
 ### Step 3b: Work on the array functions
 
 There are 9 functions you will need to write for this assignment:
 
-* <code>indexOfMax</code>
-* <code>indexOfMin</code>
-* <code>largestValue</code>
-* <code>smallestValue</code>
-* <code>sum</code>
-* <code>copyElements</code>
-* <code>copyOddOnly</code>
-* <code>multiplyPairwise</code>
-* <code>createArray</code>
+* `indexOfMax`
+* `indexOfMin`
+* `largestValue`
+* `smallestValue`
+* `sum`
+* `copyElements`
+* `copyOddOnly`
+* `multiplyPairwise`
+* `createArray`
 
-Each one has a set of tests which can be found under its corresponding heading when you type <code>make tests</code>. For example, the indexOfMax tests look like this to start: 
+Each one has a set of tests which can be found under its corresponding heading when you type `make tests`. For example, the `indexOfMax` tests look like this to start:
 
 ```
 --------------INDEX_OF_MAX--------------
@@ -118,19 +113,18 @@ Each one has a set of tests which can be found under its corresponding heading w
      Expected: 4 Actual: -42
 ```
 
-You should replace each function stub with the correct code for the function until all of the tests for each one pass. It is recommended that you work on the functions one at a time in the order that they are presented above. That is, get all the tests to pass for indexOfMax then indexOfMin and so on. When all the tests pass, move on to the next step. 
+You should replace each function stub with the correct code for the function until all of the tests for each one pass. It is recommended that you work on the functions one at a time in the order that they are presented above. That is, get all the tests to pass for `indexOfMax` then `indexOfMin`, and so on. When all the tests pass, move on to the next step.
 
-**You must implement each function iteratively. For this assignment, you CANNOT implement the function with recursion. Any recursive implementations will not receive credit for this assignment and be flagged for possible plagarism.** (Note: if you are unaware what a recursive implementation entails, do not worry, we have not covered this technique in class yet. This assignment should be completed using only using the techniques we learned in class.)
+You must implement each function iteratively. For this assignment, you **cannot** implement the function with recursion. Any recursive implementations **will not receive credit for this assignment and be flagged for possible plagarism.** (Note: if you are unaware what a recursive implementation entails, do not worry, we have not covered this technique in class yet. This assignment should be completed using only using the techniques we learned in class.)
 
 ## Step 4: Checking your work before submitting
 
-When you are finished, you should be able to type  <code>make clean</code> and then <code>make tests</code> and see the following output:
-
+When you are finished, you should be able to type `make clean` and then `make tests` and see the following output:
 
 ```
--bash-4.2$ make clean
+$ make clean
 /bin/rm -f mafTest *.o
--bash-4.2$ make tests
+$ make tests
 clang++ -Wall -Wno-uninitialized   -c -o mafTest.o mafTest.cpp
 clang++ -Wall -Wno-uninitialized   -c -o moreArrayFuncs.o moreArrayFuncs.cpp
 clang++ -Wall -Wno-uninitialized   -c -o tddFuncs.o tddFuncs.cpp
@@ -238,31 +232,20 @@ PASSED: arrayToString(fiveElems, 5)
 PASSED: arrayToString(oneElem, 1)
 PASSED: arrayToString(threeElems, 3)
 PASSED: arrayToString(fiveElems, 5)
--bash-4.2$
+$
 ```
 
-At that point, you are ready to try submitting on gradescope.
+At that point, you are ready to try submitting on Gradescope.
 
 ## Step 5: Turn in your code on Gradescope
 
-Submit all the `.cpp` and `.h` files to this assignment on Gradescope via your github repo. Then visit Gradescope and check that you have a correct score.
+Submit all the `.cpp` and `.h` files to this assignment on Gradescope via your GitHub repo. Then visit Gradescope and check that you have a correct score.
+You must check that you have followed these style guidelines:
 
-* You must check that you have followed these style guidelines:
-
-1. Indentation is neat, consistent and follows good practice (see below)
-2. Variable name choice: variables should have sensible names.
-	More on indentation: Your code should be indented neatly. Code that is inside braces should be indented, and code that is at the same "level" of nesting inside braces should be indented in a consistent way. Follow the examples from lecture, the sample code, and from the textbook.   
-3. Practice the DRY (Don't Repeat Yourself) principle. Once you have finished implementing your code, try to find areas that are repetitive or redundant and spend some time to optimize. 
+1. **Indentation:** Ensure your code is neatly and consistently indented. Code inside braces (`{ }`) should be indented appropriately, and all code at the same level of nesting should follow a consistent indentation pattern. Refer to examples from lectures, sample code, and the textbook for guidance.
+2. **Variable Names:** Use meaningful and descriptive variable names that reflect their purpose.
+3. **Avoid Repetition:** Practice the DRY (Don’t Repeat Yourself) principle to identify and optimize repetitive or redundant sections for better efficiency and clarity.
 
 Commit and push the latest version of your code on github.
 
-**Graders will check your code to make sure it follows the coding style guidelines. Egregious violations to the coding style guidelines may be subject a score reduction for your assignment grade.** If you are unsure whether your code exhibits good coding style, please ask a member of the course staff during assignment.  
-
-## An important word about academic honesty and the gradescope system
-
-We will test your code against other data files too&mdash;not just these.  So while you might be able to pass the tests on gradescope now by just doing a hard-coded "cout" of the expected output, that will NOT receive credit.    
-
-To be very clear, code like this will pass on gradescope, BUT REPRESENTS A FORM OF ACADEMIC DISHONESTY since it is an attempt to just "game the system", i.e. to get the tests to pass without really solving the problem.
-
-I would hope this would be obvious, but I have to say it so that there is no ambiguity: hard coding your output is a form of cheating, i.e. a form of "academic dishonesty". Submitting a program of this kind would be subject not only to a reduced grade, but to possible disciplinary penalties. If there is <em>any</em> doubt about this fact, please ask your TA and/or your instructor for clarification.
-
+**Graders will check your code to make sure it follows the coding style guidelines. Egregious violations to the coding style guidelines may result in a score reduction for your assignment grade.** If you are unsure whether your code exhibits good coding style, please ask a member of the course staff during assignment.

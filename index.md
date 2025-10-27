@@ -11,7 +11,7 @@ This is the website for Gradescope Programming Assignments, you will find all la
 in the navbar on the left once they are released.
 
 For more information about this course, please go to our canvas page:
-[https://ucsb.instructure.com/courses/19503](https://ucsb.instructure.com/courses/19503)
+[https://ucsb.instructure.com/courses/28525](https://ucsb.instructure.com/courses/28525)
 
 
 {% for lab in site.labs %}

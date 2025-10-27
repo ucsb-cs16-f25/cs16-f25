@@ -1,18 +1,19 @@
 ---
 layout: page
-title: GSA 07
-num: gsa07
+title: HW07
+num: hw07
 nav_order: 8
 desc: "Linked Lists in C++ with structs"
 assigned: 2023-03-01 13:00
 due: 2023-03-15 23:59
+published: false
 ---
 
 # {{page.title}} - {{page.desc}}
 
 ## Goals for this assignment
 
-The goal of this assignment is practice iterating through linked lists and solving problems. Continue to practice code tracing to reason about your code. 
+The goal of this assignment is practice iterating through linked lists and solving problems. Continue to practice code tracing to reason about your code.
 
 We request that you DO NOT ask the staff to debug your code for you. They have been specifically instructed not to debug *for* you, but rather to *guide you* through the process of debugging your code yourselves.
 
@@ -33,7 +34,7 @@ The starter code is in this repo:
 
 * <https://github.com/{{site.github_org}}/STARTER-{{page.num}}>
 
-The URL for cloning this repo is this: 
+The URL for cloning this repo is this:
 
 * <tt>git@github.com:{{site.github_org}}/STARTER-{{page.num}}.git</tt>
 
@@ -44,7 +45,7 @@ Previous assignments contain instruction for the process of:
 Please do those steps now, and then do a `git push origin main` to populate your own repo with the starter code.
 
 If you need help with these steps:
-* First consult previous assignments for more detailed instructions.   
+* First consult previous assignments for more detailed instructions.
 * Then, if you are still having trouble, ask the staff for help during discussion section or office hours.
 
 Once you've populated your repo, typing the `ls` command should show you the following files in your current directory
@@ -67,7 +68,7 @@ Type "make tests" and you will see some tests pass, but some fail.
 
 You are finished when all the tests pass. We have implemented a few function that involve linked lists in `linkedListFuncs.cpp`. There is only one file you need to edit this week:
 
-<code>moreLinkedListFuncs.cpp</code> contains more functions that deal with linked lists.  
+<code>moreLinkedListFuncs.cpp</code> contains more functions that deal with linked lists.
 
 
 ### Step 3b: Work on the linked list functions
@@ -85,7 +86,7 @@ There are 7 functions you will need to write for this assignment:
 * <code>sum</code>
 
 
-Each one has a set of tests which can be found under its corresponding heading when you type <code>make tests</code>. For example, the addIntToEndOfList tests look like this to start: 
+Each one has a set of tests which can be found under its corresponding heading when you type <code>make tests</code>. For example, the addIntToEndOfList tests look like this to start:
 
 ```
 ./llTests 1
@@ -103,7 +104,7 @@ PASSED: linkedListToString(empty)
 
 ```
 
-You should replace each function stub with the correct code for the function until all of the tests for each one pass. It is recommended that you work on the functions one at a time in the order that they are presented above. That is, get all the tests to pass for addIntToStartOfList then addIntToEndOfList and so on. When all the tests pass, move on to the next step. 
+You should replace each function stub with the correct code for the function until all of the tests for each one pass. It is recommended that you work on the functions one at a time in the order that they are presented above. That is, get all the tests to pass for addIntToStartOfList then addIntToEndOfList and so on. When all the tests pass, move on to the next step.
 
 ## Step 4: Checking your work before submitting
 
@@ -200,16 +201,16 @@ Submit all the .cpp and .h files to the assignment on Gradescope called {{page.n
 
 1. Indentation is neat, consistent and follows good practice (see below)
 2. Variable name choice: variables should have sensible names.
-	More on indentation: Your code should be indented neatly. Code that is inside braces should be indented, and code that is at the same "level" of nesting inside braces should be indented in a consistent way. Follow the examples from lecture, the sample code, and from the textbook.   
-3. Practice the DRY (Don't Repeat Yourself) principle. Once you have finished implementing your code, try to find areas that are repetitive or redundant and spend some time to optimize. 
+	More on indentation: Your code should be indented neatly. Code that is inside braces should be indented, and code that is at the same "level" of nesting inside braces should be indented in a consistent way. Follow the examples from lecture, the sample code, and from the textbook.
+3. Practice the DRY (Don't Repeat Yourself) principle. Once you have finished implementing your code, try to find areas that are repetitive or redundant and spend some time to optimize.
 
 Commit and push the latest version of your code on github.
 
-**Graders will check your code to make sure it follows the coding style guidelines. Egregious violations to the coding style guidelines may be subject a score reduction for your assignment grade.** If you are unsure whether your code exhibits good coding style, please ask a member of the course staff during assignment.  
+**Graders will check your code to make sure it follows the coding style guidelines. Egregious violations to the coding style guidelines may be subject a score reduction for your assignment grade.** If you are unsure whether your code exhibits good coding style, please ask a member of the course staff during assignment.
 
 ## An important word about academic honesty and the gradescope system
 
-We will test your code against other data files too&mdash;not just these.  So while you might be able to pass the tests on gradescope now by just doing a hard-coded "cout" of the expected output, that will NOT receive credit.    
+We will test your code against other data files too&mdash;not just these.  So while you might be able to pass the tests on gradescope now by just doing a hard-coded "cout" of the expected output, that will NOT receive credit.
 
 To be very clear, code like this will pass on gradescope, BUT REPRESENTS A FORM OF ACADEMIC DISHONESTY since it is an attempt to just "game the system", i.e. to get the tests to pass without really solving the problem.
 
@@ -222,5 +223,3 @@ If you are logged in remotely, you can log out using the exit command:
 ```
 $ exit
 ```
-
-

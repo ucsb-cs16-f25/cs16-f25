@@ -1,12 +1,13 @@
 ---
 layout: page
-num: gsa06
-title: GSA 06
+num: hw06
+title: HW06
 nav_order: 7
 ready: true
 desc: "Fun with shapes: Pointers and Structs"
 assigned: 2023-11-09 14:00
 due: 2023-11-16 14:00
+published: false
 ---
 
 # {{page.title}} - {{page.desc}}
@@ -14,18 +15,18 @@ due: 2023-11-16 14:00
 
 # Collaboration policy
 
-This assignment must be completed individually 
+This assignment must be completed individually
 
 # Goals of this assignment
 
 The goal of this assignment is to demonstrate how we can abstract "things" in the world
-(such as geometric objects) into program contructs. 
-We also hope that you will get a lot more practice with using pointers, 
+(such as geometric objects) into program contructs.
+We also hope that you will get a lot more practice with using pointers,
 passing pointers to functions and using pointers along with structs. Y
 
 You will continue to use the test-driven development (TDD) process to develop high quality and well-tested code in a systematic manner.
-When you run into problems with your code, remember to use the skills we have been 
-learning such as code tracing and drawing pointer diagrams, 
+When you run into problems with your code, remember to use the skills we have been
+learning such as code tracing and drawing pointer diagrams,
 to understand the dynamics of your program and how it is interacting with memory.
 
 # Step by Step Instructions
@@ -58,7 +59,7 @@ Previous assignments contain instruction for the process of:
 Please do those steps now, and then do a `git push origin main` to populate your own repo with the starter code.
 
 If you need help with these steps:
-* First consult previous assignments for more detailed instructions.   
+* First consult previous assignments for more detailed instructions.
 * Then, if you are still having trouble, ask the staff for help during discussion section or office hours.
 
 Once you've populated your repo, typing the `ls` command should show you the following files in your current directory
@@ -73,12 +74,12 @@ distanceBetweenTest.cpp		tddFuncs.cpp
 initBoxTest.cpp			tddFuncs.h
 initPointTest.cpp		utility.cpp
 pointToStringTest.cpp		utility.h
-$ 
+$
 ```
 
 ## Step 3: Reviewing the files and what your tasks are
 
-Here is a brief description of each of the files and expected implementation. 
+Here is a brief description of each of the files and expected implementation.
 
 Note that some of the files are organized in pairs of matching `.h`/`.cpp` files:
 * These include:
@@ -101,14 +102,14 @@ Here's an overview of all of the files and their purpose:
 * tddFuncs.h/cpp : Functions that you may use to test your code
 * shapes.h : Contains the declaration of two structs: Point and Box. These data structures will be used in other files e.g. shapeFuncs.h/cpp
 * shapeFuncs.h/cpp : Functions to compute metrics on geometric constructs such as points and boxes (see shapes.h)
-* *Test.cpp: Each of the files that end in Test.cpp contain code to test a particular function in shapeFuncs.cpp. 
+* *Test.cpp: Each of the files that end in Test.cpp contain code to test a particular function in shapeFuncs.cpp.
 
 
 Here are some further notes about the files that end in `Test.cpp`:
 
-* As an example,  `distanceBetweenTest.cpp` contains test code to test your implementation of the `distanceBetween()` function in `shapeFuncs.cpp`. 
-* Note that each `*Test.cpp` file tests contains a main function, which means that each test file along with its  dependent code is meant to be compiled into a separate executable. 
-* The provided `Makefile` makes sure that this is in fact the case. 
+* As an example,  `distanceBetweenTest.cpp` contains test code to test your implementation of the `distanceBetween()` function in `shapeFuncs.cpp`.
+* Note that each `*Test.cpp` file tests contains a main function, which means that each test file along with its  dependent code is meant to be compiled into a separate executable.
+* The provided `Makefile` makes sure that this is in fact the case.
 
 The rationale behind this approach is that each function in `shapeFuncs.cpp` can be developed and tested independently as much as possible.
 
@@ -125,17 +126,17 @@ Here is a list of your tasks for this assignment.  You will see that we are work
 * Commit and push your code to github with commands:
   - `git status` to see which files have been changed and need to be added.
   -  Repeat `git add filename` for each `filename`  that you have changed
-  -  For example: `git add shapeFuncs.cpp` 
+  -  For example: `git add shapeFuncs.cpp`
   - `git commit -m "distanceBetween function is now passing tests"`  (the exact comment is up to you; this is a suggestion)
   - `git push origin main`
-* You should now be able to make a submission to Gradescope and see that you are getting at least partial credit for the assignment (i.e. some of your tests are working.)  
+* You should now be able to make a submission to Gradescope and see that you are getting at least partial credit for the assignment (i.e. some of your tests are working.)
 ### (2) Understand the `pointsApproxEqual` function
 
 * Run ./pointsApproxEqualTest and see it pass.
 * Look at the code in pointsApproxEqualTest.cpp and shapeFuncs.cpp and understand how it works.
-* Notice how the pointsApproxEqual() function uses the distanceBetween() function that you just wrote and tested, rather than writing new code within pointsApproxEqual() that repeats the logic of distanceBetween(). 
-* The takeaway here is that you want to keep your code as DRY as possible (DRY==Don't Repeat Yourself). 
-* You also want to only reuse code that has already been tested. 
+* Notice how the pointsApproxEqual() function uses the distanceBetween() function that you just wrote and tested, rather than writing new code within pointsApproxEqual() that repeats the logic of distanceBetween().
+* The takeaway here is that you want to keep your code as DRY as possible (DRY==Don't Repeat Yourself).
+* You also want to only reuse code that has already been tested.
 * You'll need to understand pointsApproxEqual() to get ./boxesApproxEqual to pass.
 
 There is no code to commit for this step; this is just a step for you to read some code and understand it.
@@ -156,12 +157,12 @@ There is no code to commit for this step; this is just a step for you to read so
 
 ### (4) Understand your code by drawing a picture
 
-Now, as preparation for homework and exam questions, reason about why your code works. 
+Now, as preparation for homework and exam questions, reason about why your code works.
 
-* Do this by drawing a pointer diagram that shows the state of memory right before the `initPoint` function returns when it is called for the very first time by the test code. 
-* Your pointer diagram should show the value of member variables `x` and `y` of the struct object `p1` in `initPointTest.cpp` 
-  as well as the relationship between `p1` and the formal parameter `p` of the function `initPoint`. 
-* You should also show the formal parameters `xVal` and `yVal` in memory and indicate whether or not they are colocated in memory with any other variables (such as `x` and `y`). 
+* Do this by drawing a pointer diagram that shows the state of memory right before the `initPoint` function returns when it is called for the very first time by the test code.
+* Your pointer diagram should show the value of member variables `x` and `y` of the struct object `p1` in `initPointTest.cpp`
+  as well as the relationship between `p1` and the formal parameter `p` of the function `initPoint`.
+* You should also show the formal parameters `xVal` and `yVal` in memory and indicate whether or not they are colocated in memory with any other variables (such as `x` and `y`).
 * This drawing is only for your own purposes; we are not grading it.  However, you are encouraged to make the drawing on a piece of paper and show it to one of the staff during assignment section or office hours to get feedback on whether your understanding is correct.
 
 
@@ -169,7 +170,7 @@ Now, as preparation for homework and exam questions, reason about why your code 
 
 
 * Run `./boxesApproxEqualTest` and see it fail.
-* Edit the `boxesApproxEqual` function in `shapeFuncs.cpp` to replace the stub with correct code.  As you do, consider adding an approxEqual function that takes two double values into `utility.h` and `utility.cpp`, as this will make your coding job easier, and keep you code "DRYer".  
+* Edit the `boxesApproxEqual` function in `shapeFuncs.cpp` to replace the stub with correct code.  As you do, consider adding an approxEqual function that takes two double values into `utility.h` and `utility.cpp`, as this will make your coding job easier, and keep you code "DRYer".
 * Also, consider reusing the `pointsApproxEqual` function in your `boxesApproxEqual` solution.  Remember that the <code>&amp;&amp;</code> operator is the symbol for "logical and" in C++.
 * Run `./boxesApproxEqualTest` and see it pass.
 * Reason about why your code worked, draw a diagram to show the relationship between the formal and actual parameters. You don't need to submit the diagram but you may be asked to draw such a diagram on an exam!
@@ -196,7 +197,7 @@ Now, as preparation for homework and exam questions, reason about why your code 
 ### (7) Get `boxToString` tests set up
 
 * Run `./pointToStringTest` and see it pass; we'll use that as a basis to develop `boxToString`.
-* Copy `pointToStringTest.cpp` to `boxToStringTest.cpp` (the Unix command is `cp`) and write code for tests for the `boxToString` function.  
+* Copy `pointToStringTest.cpp` to `boxToStringTest.cpp` (the Unix command is `cp`) and write code for tests for the `boxToString` function.
   - Look in `shapeFuncs.cpp` at the `boxToString` function stub for an example of the format you need for boxToString's return values.
   -  Make tests for different precisions, just like `pointToString` has.
 * Add code to the `Makefile` so that `boxToString` runs. Just follow the model&mdash;adding code in the `Makefile` for `boxToStringTest` everywhere you see code for `pointToStringTest`
@@ -302,8 +303,6 @@ Please check that you have followed these style guidelines:
 
 1. Indentation is neat, consistent and follows good practice (see below)
 2. Variable name choice: variables should have sensible names.
-	More on indentation: Your code should be indented neatly.  Code that is inside braces should be indented, and code that is at the same "level" of nesting inside braces should be indented in a consistent way.    Follow the examples from lecture, the sample code, and from the textbook.   
+	More on indentation: Your code should be indented neatly.  Code that is inside braces should be indented, and code that is at the same "level" of nesting inside braces should be indented in a consistent way.    Follow the examples from lecture, the sample code, and from the textbook.
 
 Your submission should be on-time. If you miss the deadline, you are subject to getting a zero.   The instructor may or may not extend the deadline for late submissions at their discretion.
-
-

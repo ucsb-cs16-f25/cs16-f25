@@ -1,7 +1,7 @@
 ---
 layout: page
-title: GSA 08
-num: gsa08
+title: HW08
+num: hw08
 nav_order: 8
 desc: "Recursion"
 assigned: 2023-03-01 13:00
@@ -12,9 +12,9 @@ due: 2023-03-17 23:59
 
 ## Goals of this assignment
 
-The goal of this assignment is get more practice with recursion, linked-lists, and string functions. 
+The goal of this assignment is get more practice with recursion, linked-lists, and string functions.
 
-To prepare you for the final exam, this assignment will ask you to implement functions that may appear difficult. Do not panic! 
+To prepare you for the final exam, this assignment will ask you to implement functions that may appear difficult. Do not panic!
 
 # Step by Step Instructions!
 
@@ -43,7 +43,7 @@ Previous assignments contain instruction for the process of:
 Please do those steps now, and then do a `git push origin main` to populate your own repo with the starter code.
 
 If you need help with these steps:
-* First consult previous assignments for more detailed instructions.   
+* First consult previous assignments for more detailed instructions.
 * Then, if you are still having trouble, ask the staff for help during discussion section or office hours.
 
 Once you've populated your repo, typing the `ls` command should show you the following files in your current directory.
@@ -62,7 +62,7 @@ Here is a list of your tasks for this assignment:
 
 ### Step 3a: Look at the Big Picture
 
-Type "make tests" and you will see some tests pass, but some fail. 
+Type "make tests" and you will see some tests pass, but some fail.
 
 You are finished when all the tests pass. You will need to edit two files: <code>linkedListFuncs.cpp</code> and <code>strFuncs.cpp</code>
 
@@ -76,12 +76,12 @@ There are 8 functions you will need to write for this assignment, one of which i
 In strFuncs.cpp:
 - **[10 points] isPalindrome()**
   - Recursively check if a string is a palindrome
-  - A palindrome is a word or phrase that reads the same backwards & forwards 
+  - A palindrome is a word or phrase that reads the same backwards & forwards
   - Palindromes **are not** case-sensitive - disregard spaces as well
   - Examples
     - *Noel sees Leon* reads *noeL sees leoN* backwards, and as we disregard spaces and capitalization, it is a palindrome
     - *HelloN* reads *olleH* and is not a palindrome
-    
+
 In linkedListFuncs.cpp:
 - **[10 points] recursiveSum()**
    - Recursively calculate the sum of a linked list
@@ -101,18 +101,18 @@ In linkedListFuncs.cpp:
   - Recursively find the kth Node of a linked list
   - Given a head node and integer k, return the address of the kth node
     - You do not know whether the linked-list contains k or more nodes; if k is greater than the length of the linked-list, return NULL
-    - Example: 
+    - Example:
       - list:  2 &rarr; 3 &rarr; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         - recursiveFindKthNode(list, 1) = 2
         - recursiveFindKthNode(list, 3) = 4
         - recursiveFindKthNode(list, 4) = NULL
 
 - **[10 points] recursiveDeleteKthNode()**
-  - Recursively delete the kth node from a linked list 
+  - Recursively delete the kth node from a linked list
   - Given the head of a linked list, delete the kth node from the linked list
     - k will always be less than or equal to the length of the linked list
     - Return NULL if there are no nodes left after deleting.
-  - Example: 
+  - Example:
       - list:  2 &rarr; 3 &rarr; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         - recursiveDeleteKthNode(list, 2) = 2 &rarr; 4
         - recursiveDeleteKthNode(list, 1) = 3 &rarr; 4
@@ -123,7 +123,7 @@ In linkedListFuncs.cpp:
   - Given the head of a linked list, delete the first k nodes from the linked list
     - k will always be less than or equal to the length of the linked list
     - Return NULL if there are no nodes left after deleting.
-  - Example: 
+  - Example:
       - list:  2 &rarr; 3 &rarr; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         - recursiveRemoveKFromFront(list, 2) = 4
         - recursiveRemoveKFromFront(list, 1) = 3 &rarr; 4
@@ -134,8 +134,8 @@ In linkedListFuncs.cpp:
     - if one linked-list is shorter, fill the rest of the result with elements from the other (i.e., treat the non-existent nodes as a value of zero)
     - Do **NOT** change the values of the original linked list - you must make a new one
     - Examples
-      - Linked List 1: 1 &rarr; 2 &rarr; 3 &rarr; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Linked List 2: 5 &rarr; 6 &rarr; 7 
-        - Output: 6 &rarr; 8 &rarr; 10 &rarr; 4 
+      - Linked List 1: 1 &rarr; 2 &rarr; 3 &rarr; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Linked List 2: 5 &rarr; 6 &rarr; 7
+        - Output: 6 &rarr; 8 &rarr; 10 &rarr; 4
 
 - **recursiveSplice()**
   - Doing this problem is optional
@@ -144,15 +144,15 @@ In linkedListFuncs.cpp:
     - Splice two linked lists by interweaving the nodes - the second linked list's nodes should be inserted at alternating positions into the first linked list
     - If the size of the two linked lists differ, after successfully splicing, finish the combined linked list with the remaining elements of the larger linked list
    - Examples
-      - Linked List 1: 1 &rarr; 2 &rarr; 3 &rarr; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Linked List 2: 5 &rarr; 6 &rarr; 7 &rarr; 8 
+      - Linked List 1: 1 &rarr; 2 &rarr; 3 &rarr; 4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Linked List 2: 5 &rarr; 6 &rarr; 7 &rarr; 8
         - Output: 1 &rarr; 5 &rarr; 2 &rarr; 6 &rarr; 3 &rarr; 7 &rarr; 4 &rarr; 8
 
       - Linked List 1: 1 &rarr; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Linked List 2: 3 &rarr; 4 &rarr; 5 &rarr; 6
-        - Output: 1 &rarr; 3 &rarr; 2 &rarr; 4 &rarr; 5 &rarr; 6 
-        
-  - You CANNOT create another linked list - doing so will fail both the local tests and Gradescope tests. Instead, splice the lists together by rearranging the *next* pointers of each linked list. You are allowed to declare additional nodes, but the returned linked list should only contain nodes from each linked list, in some order. 
-  
-Each one has a set of tests which can be found under its corresponding heading when you type <code>make tests</code>. For example, the recursiveRemoveKNodesFromFront tests look like this to start: 
+        - Output: 1 &rarr; 3 &rarr; 2 &rarr; 4 &rarr; 5 &rarr; 6
+
+  - You CANNOT create another linked list - doing so will fail both the local tests and Gradescope tests. Instead, splice the lists together by rearranging the *next* pointers of each linked list. You are allowed to declare additional nodes, but the returned linked list should only contain nodes from each linked list, in some order.
+
+Each one has a set of tests which can be found under its corresponding heading when you type <code>make tests</code>. For example, the recursiveRemoveKNodesFromFront tests look like this to start:
 
 ```
 ./llTests 1
@@ -167,12 +167,12 @@ You should replace each function stub with the correct code for the function unt
 
 When you are finished, you should be able to type  <code>make clean</code> and then <code>make tests</code> and see all of the tests pass.
 
-At that point, you are ready to try submitting on gradescope. 
+At that point, you are ready to try submitting on gradescope.
 
 
 ## Step 5: Submitting on Gradescope
 
-Submit the `strFuncs.cpp` and `linkedListFuncs.cpp` files on gradescope. 
+Submit the `strFuncs.cpp` and `linkedListFuncs.cpp` files on gradescope.
 
 **If your code does not pass the Gradescope tests, think about possible edge cases that is breaking your code.**
 
@@ -199,7 +199,7 @@ Most of the points will be awarded based on gradescope automatic grading. Other 
 
 ## Academic Honesty
 
-We will test your code against other data files too&mdash;not just these. So while you might be able to pass the tests on gradescope now by just doing a hard-coded "cout" of the expected output, that will NOT receive credit.    
+We will test your code against other data files too&mdash;not just these. So while you might be able to pass the tests on gradescope now by just doing a hard-coded "cout" of the expected output, that will NOT receive credit.
 
 To be very clear, code like this will pass on gradescope, but represents a form of academic dishonesty since it is an attempt to just "game the system", i.e. to get the tests to pass without really solving the problem.
 
