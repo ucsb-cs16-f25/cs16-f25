@@ -1,22 +1,17 @@
 ---
 layout: page
-title: GS Assignments
+title: Homework Assignments
 nav_order: 1
-description: Lab Assignments
+description: Homework assignments
 ---
 
-# GradeScope Programming Assignments
+# Homework Assignments
 
-This is the website for Gradescope Programming Assignments, you will find all lab instructions
-in the navbar on the left once they are released.
+This is the website for homework assignment instructions. You will find all homework instructions from HW05 onwards
+in the navbar on the left once they are released. Previous assignments are available on [Iris](https://iris.3e.cs.ucsb.edu/page/cs16-hw).
 
 For more information about this course, please go to our canvas page:
 [https://ucsb.instructure.com/courses/28525](https://ucsb.instructure.com/courses/28525)
-
-
-{% for lab in site.labs %}
-* [{{lab.num}}]({{ lab.url | relative_url}})&mdash;{{lab.desc}}
-{% endfor %}
 
 # Formatting guide
 
